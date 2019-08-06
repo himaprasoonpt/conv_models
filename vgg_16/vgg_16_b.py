@@ -7,6 +7,13 @@ conv_padding = 'SAME'
 
 
 def add_vgg_conv_pool_stack(num_conv, filters, model):
+    """
+
+    :param num_conv: Number of convolution layer stacks
+    :param filters: number of filters
+    :param model: keras/ tensroflow 2.0 model
+    :return:
+    """
     for i in range(num_conv):
         model.add(
             layers.Conv2D(filters=filters, kernel_size=conv_filter, activation='relu',
